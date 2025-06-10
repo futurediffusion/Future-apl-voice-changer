@@ -15,6 +15,9 @@ from assets.i18n.i18n import I18nAuto
 
 from rvc.lib.utils import format_title
 from tabs.settings.sections.restart import stop_infer
+from tabs.voice_blender.voice_blender import voice_blender_tab
+from tabs.extra.extra import extra_tab
+from tabs.settings.settings import settings_tab
 
 i18n = I18nAuto()
 
@@ -2158,3 +2161,12 @@ def inference_tab():
         inputs=[],
         outputs=[convert_button_batch, stop_button],
     )
+
+    with gr.Accordion(i18n("Voice Blender"), open=False):
+        voice_blender_tab()
+
+    with gr.Accordion(i18n("Extra Tools"), open=False):
+        extra_tab()
+
+    with gr.Accordion(i18n("Settings"), open=False):
+        settings_tab()
