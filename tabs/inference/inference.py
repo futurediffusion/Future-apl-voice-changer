@@ -391,8 +391,9 @@ def inference_tab():
                 outputs=[index_file],
             )
 
-    # Single inference tab
-    with gr.Tab(i18n("Single")):
+    batch_mode = gr.Checkbox(label="Batch Mode", value=False)
+
+    with gr.Column(visible=True) as single_group:
         with gr.Column():
             upload_audio = gr.Audio(
                 label=i18n("Upload Audio"), type="filepath", editable=False
@@ -1030,8 +1031,7 @@ def inference_tab():
             )
             vc_output2 = gr.Audio(label=i18n("Export Audio"))
 
-    # Batch inference tab
-    with gr.Tab(i18n("Batch")):
+    with gr.Column(visible=False) as batch_group:
         with gr.Row():
             with gr.Column():
                 input_folder_batch = gr.Textbox(
@@ -1959,6 +1959,11 @@ def inference_tab():
         fn=change_choices,
         inputs=[model_file],
         outputs=[model_file, index_file, audio, sid, sid_batch],
+    )
+    batch_mode.change(
+        fn=lambda m: (gr.update(visible=not m), gr.update(visible=m)),
+        inputs=[batch_mode],
+        outputs=[single_group, batch_group],
     )
     audio.change(
         fn=output_path_fn,
