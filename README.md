@@ -64,7 +64,7 @@ Start Applio using:
 - **Windows:** Double-click `run-applio.bat`.
 - **Linux/macOS:** Run `run-applio.sh`.
 
-This launches the Gradio interface in your default browser.
+Running `run-applio.*` opens the inference interface in your browser. From the new top bar, use the drop-down menus to access **Voice Blender**, **Extras**, and **Settings**.
 
 ### 3. Optional: TensorBoard Monitoring
 
