@@ -2171,11 +2171,13 @@ def inference_tab():
         outputs=[convert_button_batch, stop_button],
     )
 
-    with gr.Accordion(i18n("Voice Blender"), open=False):
-        voice_blender_tab()
-
-    with gr.Accordion(i18n("Extra Tools"), open=False):
-        extra_tab()
-
-    with gr.Accordion(i18n("Settings"), open=False):
-        settings_tab()
+    with gr.Accordion(i18n("Utilities"), open=False):
+        with gr.Tabs():
+            with gr.TabItem(i18n("Voice Blender")):
+                voice_blender_tab()
+            with gr.TabItem(i18n("Extra Tools")):
+                with gr.Tabs():
+                    extra_tab()
+            with gr.TabItem(i18n("Settings")):
+                with gr.Tabs():
+                    settings_tab()
