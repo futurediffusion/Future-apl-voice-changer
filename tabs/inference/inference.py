@@ -18,7 +18,6 @@ from tabs.settings.sections.restart import stop_infer
 from tabs.voice_blender.voice_blender import voice_blender_tab
 from tabs.extra.extra import extra_tab
 from tabs.settings.settings import settings_tab
-from tabs.song.song import song_tab
 
 i18n = I18nAuto()
 
@@ -2174,8 +2173,6 @@ def inference_tab():
 
     with gr.Accordion(i18n("Utilities"), open=False):
         with gr.Tabs():
-            with gr.TabItem(i18n("IA")):
-                song_tab()
             with gr.TabItem(i18n("Voice Blender")):
                 voice_blender_tab()
             with gr.TabItem(i18n("Extra Tools")):
