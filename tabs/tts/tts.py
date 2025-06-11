@@ -332,7 +332,7 @@ def tts_tab():
         info=i18n(
             "Please ensure compliance with the terms and conditions detailed in [this document](https://github.com/IAHispano/Applio/blob/main/TERMS_OF_USE.md) before proceeding with your inference."
         ),
-        value=False,
+        value=True,
         interactive=True,
     )
     convert_button = gr.Button(i18n("Convert"))

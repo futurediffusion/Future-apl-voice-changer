@@ -18,6 +18,7 @@ from tabs.settings.sections.restart import stop_infer
 from tabs.voice_blender.voice_blender import voice_blender_tab
 from tabs.extra.extra import extra_tab
 from tabs.settings.settings import settings_tab
+from tabs.log_manager.log_manager import log_manager_tab
 
 i18n = I18nAuto()
 
@@ -1021,7 +1022,7 @@ def inference_tab():
             info=i18n(
                 "Please ensure compliance with the terms and conditions detailed in [this document](https://github.com/IAHispano/Applio/blob/main/TERMS_OF_USE.md) before proceeding with your inference."
             ),
-            value=False,
+            value=True,
             interactive=True,
         )
 
@@ -1641,7 +1642,7 @@ def inference_tab():
             info=i18n(
                 "Please ensure compliance with the terms and conditions detailed in [this document](https://github.com/IAHispano/Applio/blob/main/TERMS_OF_USE.md) before proceeding with your inference."
             ),
-            value=False,
+            value=True,
             interactive=True,
         )
         convert_button_batch = gr.Button(i18n("Convert"))
@@ -2181,6 +2182,8 @@ def inference_tab():
             with gr.TabItem(i18n("Extra Tools")):
                 with gr.Tabs():
                     extra_tab()
+            with gr.TabItem(i18n("Model Folder Creator")):
+                log_manager_tab()
             with gr.TabItem(i18n("Settings")):
                 with gr.Tabs():
                     settings_tab()
