@@ -127,7 +127,7 @@
   "Clean Strength": "Fuerza limpia",
   "Enable formant shifting. Used for male to female and vice-versa convertions.": "Habilite el cambio de formantes. Se utiliza para conversiones de macho a hembra y viceversa.",
   "Browse presets for formanting": "Examinar los ajustes preestablecidos para el formante",
-  "Pitch": "Alquitrán",
+  "Pitch": "Tono - Alquitrán",
   "Set the clean-up level to the audio you want, the more you increase it the more it will clean up, but it is possible that the audio will be more compressed.": "Establezca el nivel de limpieza en el audio que desee, cuanto más lo aumente, más se limpiará, pero es posible que el audio esté más comprimido.",
   "Default value is 1.0": "El valor predeterminado es 1.0",
   "Presets are located in /assets/formant_shift folder": "Los ajustes preestablecidos se encuentran en la carpeta /assets/formant_shift",

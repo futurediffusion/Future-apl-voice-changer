@@ -408,6 +408,18 @@ def inference_tab():
                     allow_custom_value=True,
                 )
 
+            pitch = gr.Slider(
+                minimum=-24,
+                maximum=24,
+                step=1,
+                label=i18n("Pitch"),
+                info=i18n(
+                    "Set the pitch of the audio, the higher the value, the higher the pitch."
+                ),
+                value=0,
+                interactive=True,
+            )
+
         with gr.Accordion(i18n("Advanced Settings"), open=False):
             with gr.Column():
                 clear_outputs_infer = gr.Button(
@@ -863,17 +875,6 @@ def inference_tab():
                                 placeholder=i18n("Enter preset name"),
                             )
                             export_button = gr.Button(i18n("Export Preset"))
-                    pitch = gr.Slider(
-                        minimum=-24,
-                        maximum=24,
-                        step=1,
-                        label=i18n("Pitch"),
-                        info=i18n(
-                            "Set the pitch of the audio, the higher the value, the higher the pitch."
-                        ),
-                        value=0,
-                        interactive=True,
-                    )
                     index_rate = gr.Slider(
                         minimum=0,
                         maximum=1,
@@ -1052,6 +1053,19 @@ def inference_tab():
                     value=os.path.join(now_dir, "assets", "audios"),
                     interactive=True,
                 )
+
+            pitch_batch = gr.Slider(
+                minimum=-24,
+                maximum=24,
+                step=1,
+                label=i18n("Pitch"),
+                info=i18n(
+                    "Set the pitch of the audio, the higher the value, the higher the pitch."
+                ),
+                value=0,
+                interactive=True,
+            )
+
         with gr.Accordion(i18n("Advanced Settings"), open=False):
             with gr.Column():
                 clear_outputs_batch = gr.Button(
@@ -1495,17 +1509,6 @@ def inference_tab():
                                 placeholder=i18n("Enter preset name"),
                             )
                             export_button = gr.Button(i18n("Export Preset"))
-                    pitch_batch = gr.Slider(
-                        minimum=-24,
-                        maximum=24,
-                        step=1,
-                        label=i18n("Pitch"),
-                        info=i18n(
-                            "Set the pitch of the audio, the higher the value, the higher the pitch."
-                        ),
-                        value=0,
-                        interactive=True,
-                    )
                     index_rate_batch = gr.Slider(
                         minimum=0,
                         maximum=1,
