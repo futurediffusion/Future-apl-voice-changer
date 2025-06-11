@@ -757,7 +757,7 @@ def train_tab():
             info=i18n(
                 "Please ensure compliance with the terms and conditions detailed in [this document](https://github.com/IAHispano/Applio/blob/main/TERMS_OF_USE.md) before proceeding with your training."
             ),
-            value=False,
+            value=True,
             interactive=True,
         )
         train_output_info = gr.Textbox(

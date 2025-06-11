@@ -321,5 +321,7 @@
   "Model Author Name": "Nombre del autor del modelo",
   "Select the speaker ID to use for the conversion.": "Seleccione el ID de altavoz que se utilizará para la conversión.",
   "Set the autotune strength - the more you increase it the more it will snap to the chromatic grid.": "Establezca la intensidad del ajuste automático: cuanto más lo aumente, más se ajustará a la cuadrícula cromática.",
-  "The name that will appear in the model information.": "El nombre que aparecerá en la información del modelo."
+  "The name that will appear in the model information.": "El nombre que aparecerá en la información del modelo.",
+  "Model Folder Creator": "Creador de carpetas de modelo",
+  "Create Log Folder": "Crear carpeta de logs"
 }
